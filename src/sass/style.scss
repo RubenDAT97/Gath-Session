@@ -1,0 +1,97 @@
+@use './abstracts/abstracts' as abs;
+@use './vendors/vendors' as ven;
+@use './base/base' as bas;
+@use './components/components' as com;
+@use './layout/layout' as ly;
+@use './pages/pages' as pg;
+@use './themes/themes' as th;
+@use 'settings' as se;
+
+.header {
+    margin: 37px 160px;
+}
+.principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        a {
+            text-decoration: none;
+            margin-left: 30px;
+            color: white;
+            font-size: 13px;
+            &:hover {
+                text-decoration: underline abs.$color-pink;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 8px;
+
+            }
+
+        }
+
+    }
+}
+.main {
+    margin: 0 160px;
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+    .inf {
+        width: 50%;
+
+       &__title {
+        color: white;
+        font-weight: 500;
+        font-size: 45px;
+        font-family: abs.$second-font;
+        margin-bottom: 20px;
+        }
+        &__text {
+            color:white;
+            font-size: 15px;
+            font-weight: 200;
+            margin-bottom: 30px;
+        }
+        &__bottons {
+            margin-bottom: 130px;
+            .botton1 {
+                @include com.button-pink;
+            }
+            .botton2 {
+               @include com.button-normal; 
+            }
+        }
+    }
+    
+    
+    .img {
+        width: 550px;
+        position: absolute;
+        top: -40px;
+        right: -190px;
+    }
+
+    .article {
+        display: flex;
+        gap: 10px;
+        article {
+            display: flex;
+            align-items: center;
+            img {
+                width: 45px;
+                height: 45px;
+                background-color: abs.$color-blue-grey;
+                border-radius: 4px;
+                padding: 8px;
+            }
+            p {
+                color: white;
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@use '../abstracts/abstracts' as abs;
+
+@mixin button-pink {
+    border-radius: 10px;
+    background-color: abs.$color-pink;
+    text-decoration: none;
+    color: white;
+    padding: 10px 50px;
+    font-size: 15px;
+}
+
+@mixin button-normal {
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
